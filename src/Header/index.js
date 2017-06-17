@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import Banner from './banner';
+import Menu from './menu';
 import './header.css';
 
 const Header = ({ expand }) => (
@@ -8,7 +9,7 @@ const Header = ({ expand }) => (
     className={classnames({expand})}>
     <div id="header">
       <Banner />
-      <div id="menu" />
+      <Menu />
     </div>
   </div>
 );

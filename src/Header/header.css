@@ -1,7 +1,6 @@
 #header-placeholder {
   width: 100%;
   height: 140px;
-  border-bottom: 1px solid #ddd;
   transition: height 0.3s;
 }
 
@@ -23,13 +22,5 @@
   transition: height 0.3s;
   padding-bottom: 60px;
 }
-
-#menu {
-  position: absolute;
-  bottom: 0px;
-  height: 60px;
-  width: 100%;
-}
-
 
 /* light purple #A37CED */

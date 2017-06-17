@@ -13,6 +13,10 @@ html, body {
   overflow: hidden;
 }
 
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 #root {
   height: 100%;
   width: 100%;

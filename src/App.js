@@ -6,13 +6,27 @@ import Moments from './Moments';
 import Footer from './Footer';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showFooter: true,
+    };
+  }
+
+  handleOnWheel({ deltaY }) {
+    this.setState({
+      showFooter: deltaY > 0,
+    });
+  }
+
   render() {
+    const { showFooter } = this.state;
     return (
-      <div className="App">
+      <div onWheel={this.handleOnWheel.bind(this)} className="App">
         <Header />
         <FeaturedTweets />
         <Moments />
-        <Footer />
+        {showFooter && <Footer />}
       </div>
     );
   }

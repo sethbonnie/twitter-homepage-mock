@@ -26,7 +26,7 @@ class App extends Component {
         <Header />
         <FeaturedTweets />
         <Moments />
-        {showFooter && <Footer />}
+        <Footer show={showFooter}/>
       </div>
     );
   }

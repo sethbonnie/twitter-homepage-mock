@@ -10,23 +10,25 @@ class App extends Component {
     super(props);
     this.state = {
       showFooter: true,
+      expandHeader: true,
     };
   }
 
   handleOnWheel({ deltaY }) {
     this.setState({
-      showFooter: deltaY > 0,
+      showFooter: deltaY < 0,
+      expandHeader: deltaY < 0
     });
   }
 
   render() {
-    const { showFooter } = this.state;
+    const { showFooter, expandHeader } = this.state;
     return (
       <div onWheel={this.handleOnWheel.bind(this)} className="App">
-        <Header />
+        <Header expand={ expandHeader } />
         <FeaturedTweets />
         <Moments />
-        <Footer show={showFooter}/>
+        <Footer show={ showFooter }/>
       </div>
     );
   }

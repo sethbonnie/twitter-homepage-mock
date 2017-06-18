@@ -1,0 +1,31 @@
+#featured-tweets-container {
+  margin-top: 20px;
+  min-width: 1180px;
+}
+
+.heading {
+  position: relative;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.heading-line {
+  border-bottom: 1px solid #ccc;
+  border-top: none;
+}
+
+.heading-text-container {
+  position: absolute;
+  top: -1.3em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.heading-text {
+  display: inline-block;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: 800;
+  background-color: #F5F8FA;
+}

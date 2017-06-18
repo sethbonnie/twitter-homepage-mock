@@ -2,12 +2,17 @@
   position: relative;
   background-color: #794BC4;
   background-image: url('./banner.png');
-  background-position: 440px -80px;
+  background-position: 440px -200px;
   background-size: 900px;
   background-repeat: no-repeat;
   color: white;
   height: 100%;
   width: 100%;
+  transition: background-position 0.3s;
+}
+
+.expand #banner {
+  background-position: 440px -80px;
 }
 
 #logo {

@@ -17,14 +17,16 @@ class App extends Component {
   handleOnWheel({ deltaY }) {
     this.setState({
       showFooter: deltaY < 0,
-      expandHeader: deltaY < 0
+      expandHeader: this.appNode.scrollTop < 30
     });
   }
 
   render() {
     const { showFooter, expandHeader } = this.state;
     return (
-      <div onWheel={this.handleOnWheel.bind(this)} className="App">
+      <div className="App"
+          ref={(app) => { this.appNode = app; }} 
+          onWheel={this.handleOnWheel.bind(this)} >
         <Header expand={ expandHeader } />
         <div className="App-body">
           <Moments />

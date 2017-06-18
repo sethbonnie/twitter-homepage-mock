@@ -26,8 +26,10 @@ class App extends Component {
     return (
       <div onWheel={this.handleOnWheel.bind(this)} className="App">
         <Header expand={ expandHeader } />
-        <FeaturedTweets />
-        <Moments />
+        <div className="App-body">
+          <Moments />
+          <FeaturedTweets />
+        </div>
         <Footer show={ showFooter }/>
       </div>
     );

@@ -1,8 +1,9 @@
 import React from 'react';
+import Tweet from './tweet';
 
-const Column = () => (
-  <div>
-    Columns
+const Column = ({tweets}) => (
+  <div className="column">
+    {tweets.map((tweet) => <Tweet key={tweet.id} {...tweet} />)}
   </div>
 )
 

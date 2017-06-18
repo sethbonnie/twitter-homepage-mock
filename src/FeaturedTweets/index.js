@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import faker from 'faker';
-import { range } from 'lodash';
+import { drop, range, take } from 'lodash';
 import Heading from './heading';
 import Column from './column';
 import './featured-tweets.css';
@@ -18,6 +18,7 @@ class FeaturedTweets extends Component {
         id,
         image: faker.image.image(),
         name: genName(),
+        category: faker.random.word(),
         verified: faker.random.boolean(),
         username: faker.internet.userName(),
         posted: faker.date.recent(),
@@ -30,14 +31,16 @@ class FeaturedTweets extends Component {
   }
 
   render() {
-    console.log(this.state.tweets[0]);
+    const { tweets } = this.state;
+    const total = tweets.length;
+
     return (
       <div id="featured-tweets-container">
         <Heading title="Featured Tweets"/>
         <div className="columns">
-          <Column />
-          <Column />
-          <Column />
+          <Column tweets={take(tweets, total / 3)} />
+          <Column tweets={take(drop(tweets, total / 3), total / 3)} />
+          <Column tweets={drop(tweets, total * 2 / 3)} />
         </div>
       </div>
     )

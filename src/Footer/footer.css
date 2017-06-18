@@ -3,12 +3,12 @@
   width: 100%;
   bottom: 0px;
   min-height: 32px;
-  padding: 10px;
+  padding: 10px 40px;
   font-size: 12px;
   background-color: #fdfdfd;
   border-top: 1px solid #dfdfdf;
-  color: #888;
-  transition: min-height 0.3s;
+  color: #c3c8cc;
+  transition: min-height 0.3s, padding 0.2s;
 }
 
 #footer.hide {
@@ -21,6 +21,8 @@
   text-align: center;
   margin: 0px;
   padding: 0px;
+  display: flex;
+  justify-content: space-between;
 }
 
 #footer ul li {
@@ -31,12 +33,12 @@
 #footer a {
   display: inline-block;
   margin-right: 8px;
-  color: #888;
+  color: #c3c8cc;
   text-decoration: none;
 }
 #footer a:hover {
   display: inline-block;
   margin-right: 8px;
-  color: #666;
+  color: #abafb2;
   text-decoration: underline;
 }

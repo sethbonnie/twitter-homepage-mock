@@ -5,7 +5,13 @@
 
 .columns {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+}
+
+.column {
+  width: 400px;
+  text-align: left;
+  padding: 1em;
 }
 
 .heading {
@@ -33,27 +39,4 @@
   font-size: 1.2em;
   font-weight: 800;
   background-color: #F5F8FA;
-}
-
-.tweet-category {
-  position: relative;
-}
-
-.tweet-category a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9em;
-}
-.tweet-category a:hover {
-  text-decoration: underline;
-}
-
-.tweet-category span {
-  position: absolute;
-  font-weight: 300;
-  color: #555;
-  font-size: 1.4em;
-  top: -4px;
-  margin-left: .1em;
 }

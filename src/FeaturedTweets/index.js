@@ -7,8 +7,8 @@ import './featured-tweets.css';
 
 const genName = () => 
   faker.random.number(1) ?
-    faker.company.companyName :
-    `${faker.name.firstName} ${faker.name.lastName}`
+    faker.company.companyName() :
+    `${faker.name.firstName()} ${faker.name.lastName()}`
 
 class FeaturedTweets extends Component {
   constructor(props) {

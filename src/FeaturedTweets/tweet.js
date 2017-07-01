@@ -1,11 +1,28 @@
 import React from 'react';
+import moment from 'moment';
 import { upperFirst } from 'lodash';
 import './tweet.css';
 
-const UserInfo = ({avatar, name, username, verified}) => (
+const relativeTime = {
+    future: "in %s",
+    past:   "%s",
+    s:  "%ds",
+    m:  "%dm",
+    mm: "%dm",
+    h:  "%dh",
+    hh: "%dh",
+    d:  "%dd",
+    dd: "%dd",
+    M:  "%dmon",
+    MM: "%dmon",
+    y:  "%dy",
+    yy: "%dy"
+};
+
+const UserInfo = ({avatar, name, username, verified, posted}) => (
   <div className="card-user-info">
     <div className="user-avatar">
-      <img src={avatar} />
+      <img src={avatar} alt="avatar" />
     </div>
     <div className="user-info">
       <div className="user-info-name">
@@ -15,6 +32,9 @@ const UserInfo = ({avatar, name, username, verified}) => (
       <div className="user-info-username">
         @{username}
       </div>
+    </div>
+    <div className="posted">
+      {moment.updateLocale('en', {relativeTime}), moment(posted).fromNow()}
     </div>
   </div>
 );
@@ -51,6 +71,7 @@ const Tweet = (props) => (
         <UserInfo
           username={props.username}
           name={props.name}
+          posted={props.posted}
           avatar={props.userAvatar}
           verified={props.verified}
         />

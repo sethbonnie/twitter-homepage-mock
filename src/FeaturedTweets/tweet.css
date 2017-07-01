@@ -79,6 +79,13 @@
   padding: 0.4em 0;
 }
 
+.tweet .posted {
+  color: #949799;
+  float: right;
+  font-size: 0.9em;
+  font-weight: 200;
+}
+
 .verified {
   color: #1DA1F2;
   font-size: 0.9em;

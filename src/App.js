@@ -5,6 +5,8 @@ import FeaturedTweets from './FeaturedTweets';
 import Moments from './Moments';
 import Footer from './Footer';
 
+import 'mdi/css/materialdesignicons.css';
+
 class App extends Component {
   constructor(props) {
     super(props);

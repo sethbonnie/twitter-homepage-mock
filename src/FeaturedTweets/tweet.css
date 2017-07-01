@@ -87,7 +87,7 @@
 .tweet-footer {
   display: flex;
   margin-top: 0.3em;
-  color: #666;
+  color: #949799;
 }
 
 .tweet-footer .footer-item {
@@ -104,14 +104,19 @@
 
 .tweet-footer .mdi {
   cursor: pointer;
-  font-size: 1.3em;
+  font-size: 1.2em;
   float: left;
   margin-right: 0.2em;
 }
 
-.tweet-footer .mdi-twitter-retweet {
-  font-size: 1.5em;
+.tweet-footer .mdi.mdi-twitter-retweet {
+  font-size: 1.4em;
   margin-top: -0.1em;
+}
+
+.tweet-footer .mdi.mdi-comment-outline {
+  font-size: 1.1em;
+  margin-top: 0.1em;
 }
 
 .footer-item:nth-child(1):hover {

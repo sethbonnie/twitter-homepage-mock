@@ -17,7 +17,23 @@ const UserInfo = ({avatar, name, username, verified}) => (
       </div>
     </div>
   </div>
-)
+);
+
+const TweetFooter = ({favorites, retweets}) => (
+  <div className="tweet-footer">
+    <div className="footer-item">
+      <span className="mdi mdi-comment-outline" />
+    </div>
+    <div className="footer-item">
+      <span className="mdi mdi-twitter-retweet" />
+      {retweets && <span className="number"> {retweets}</span>}
+    </div>
+    <div className="footer-item">
+      <span className="mdi mdi-heart-outline" />
+      {favorites && <span className="number"> {favorites}</span>}
+    </div>
+  </div>
+);
 
 const Tweet = (props) => (
   <div className="tweet">
@@ -41,6 +57,10 @@ const Tweet = (props) => (
         <div className="tweet-body">
           {props.content}
         </div>
+        <TweetFooter
+          retweets={props.retweets}
+          favorites={props.favorites}
+        />
       </div>
     </div>
   </div>

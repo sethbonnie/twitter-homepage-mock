@@ -78,3 +78,8 @@
   line-height: 1.3em;
   padding: 0.4em 0;
 }
+
+.verified {
+  color: #1DA1F2;
+  font-size: 0.9em;
+}

@@ -9,8 +9,8 @@ const UserInfo = ({avatar, name, username, verified}) => (
     </div>
     <div className="user-info">
       <div className="user-info-name">
-        <span>{name}</span>
-        {verified && <span className="verified" />}
+        <span>{name} </span>
+        {verified && <span className="mdi mdi-check-circle verified" />}
       </div>
       <div className="user-info-username">
         @{username}
